@@ -1,0 +1,14 @@
+:root {
+  --row: 0;
+  --col: 0;
+}
+body {
+  text-align: center;
+}
+#container {
+  border: 1px solid gray;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(var(--row), 1fr) / repeat(var(--col), 1fr);
+}
+
