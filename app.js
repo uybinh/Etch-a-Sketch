@@ -105,6 +105,7 @@ function setBoxColorBolder (color) {
   for (let i = 0; i < boxes.length; i++) {
     let opacity = 0
     boxes[i].addEventListener('mouseover', (e) => {
+      console.log(opacity)
       if (opacity < 10) ++opacity
       console.log(opacity)
       e.target.style.backgroundColor = `rgba(0 ,0 ,0 ,${opacity / 10}`
@@ -150,11 +151,11 @@ function createButtons () {
   clearButton.id = 'clear-button'
   bolderButton.textContent = 'Bolder'
   bolderButton.id = 'bolder-button'
-  buttonsGroup.appendChild(resetButton)
   buttonsGroup.appendChild(blackButton)
   buttonsGroup.appendChild(randomButton)
-  buttonsGroup.appendChild(clearButton)
   buttonsGroup.appendChild(bolderButton)
+  buttonsGroup.appendChild(clearButton)
+  buttonsGroup.appendChild(resetButton)
   body.appendChild(buttonsGroup)
 
   resetButton.addEventListener('click', resetBox)
